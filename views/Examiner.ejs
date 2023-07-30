@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examiner Portal</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <%- include ('partials/examinernavbar'); %> 
+    <div class="container-fluid">
+        <div class="row d-flex justify-content-center">
+            <div class="col-sm-12 col-md-12 col-lg-8 mt-5">
+                <div class="row d-flex justify-content-center bg-light border border-dark border-rounded">
+                    <div class="row" style="width:100%">
+                        <form action="" class="form-inline row d-flex justify-content-center py-2" style="width:100%">
+                            <div class="form-group col-lg-5 col-md-12 col-sm-12">
+                                <label for="select-date ml-3">Filter By Exam Date</label>
+                                <input type="date" name="select-date" id="select-date" class="form-control ml-3">
+                            </div>
+                            <div class="form-group col-lg-3 col-md-12 col-sm-12">
+                                <label for="select-type">Exam Type</label>
+                                <select name="select-type" id="select-type" class="form-control ml-3">
+                                    <option value="" selected>All types</option>
+                                    <option value="G">G</option>
+                                    <option value="G2">G2</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-lg-3 col-md-12 col-sm-12">
+                                <button class="btn btn-primary" id="btn-view" type="button">View Taken Exams</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="row d-flex justify-content-center">
+                        <p class="small text-danger" id="error-text"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row d-flex justify-content-center">
+            <div class="col-lg-10 col-md-12 col-sm-12" id="exams">
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="carModal" tabindex="-1" role="dialog" aria-labelledby="carModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="carDetailsLabel">Car Details</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body" id="car-body"></div>
+          </div>
+        </div>
+    </div>
+    <div class="modal fade" id="userModal" tabindex="-1" role="dialog" aria-labelledby="userModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="userModalLabel">Driver Details</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body" id="user-body"></div>
+          </div>
+        </div>
+    </div>
+    <div class="modal fade" id="feedbackModal" tabindex="-1" role="dialog" aria-labelledby="feedbackModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="feedbackModalLabel">Provide Feedback and Result</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <form action="" class="form" id="feedback-form">
+                    <div class="form-group">
+                        <label for="status-select" id="status">Select Status</label>
+                        <select name="status-select" id="status-select" class="form-control">
+                            <option value="pass">PASS</option>
+                            <option value="fail">FAIL</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="comments" id="exam-comments">Examiner Comments</label>
+                        <textarea name="" id="comments" cols="30" rows="5" class="form-control"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" id="submit-comments" onclick="submitFeedback()">Save changes</button>
+            </div>
+          </div>
+        </div>
+    </div>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/examiner.js"></script>
+</body>
+</html>

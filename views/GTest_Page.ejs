@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G Appointment Booking Form</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container-fluid p-0">
+        <%- include ('partials/drivernavbar'); %> 
+        <div class="row d-flex justify-content-center mt-3">
+            <div class="col-auto h3">G Test Appointment Slot Booking Form</div>
+        </div>
+        <div class="row my-3 d-flex justify-content-center">
+            <div class="col-lg-6 col-md-12 col-sm-12 bg-light p-2 border border-dark rounded">
+                <form action="" class="form">
+                    <div class="form-group">
+                        <label for="sinfetch">U.I.D</label>
+                        <input type="text" name="sinfetch" id="sinfetch" class="form-control" placeholder="123-456-789">
+                    </div>
+                    <div class="row d-flex justify-content-center">
+                        <button type="button" class="btn btn-primary mt-2" id="fetch">Fetch  Data</button>
+                    </div>
+                </form>
+                <div class="row d-flex justify-content-center">
+                    <div class="col-lg-auto col-md-12 col-sm-12">
+                        <span class="text-danger small" id="error-fetch-text"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%- include ('partials/form'); %>
+        <div class="row d-flex justify-content-center my-5">
+            <div class="col-lg-6 col-md-12 col-sm-12 bg-light border-dark rounded">
+                <div class="row h3 d-flex justify-content-center">
+                    <div class="col-md-12 text-center">
+                        Upload images of test car(atleast 2)
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-center">
+                    <div class="col-lg-8 col-md-12 col-sm-12 border border-dark rounded bg-light">
+                        <form class="form" id="imageform" method="post" enctype="multipart/form-data">
+                            <div class="row d-flex justify-content-center">
+                                <div class="col-lg-auto col-md-12 col-sm-12 my-2">
+                                    <input type="file" name="images" id="images" class="form-control" multiple accept="image/*">
+                                </div>
+                            </div>
+                            <div class="row d-flex justify-content-center">
+                                <div class="col-lg-auto col-md-12 col-sm-12 my-2">
+                                    <button type="button" id="upload-images" class="btn btn-primary">Upload images of the car</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row d-flex justify-content-center">
+            <div class="col-sm-12 col-md-12 col-lg-8">
+                <div class="row h3 d-flex justify-content-center">
+                    <div class="col-md-12 text-center">
+                        Book an Appointment for G Test
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-center bg-light border border-dark border-rounded">
+                    <div class="row" style="width:100%">
+                        <form action="" class="form-inline row d-flex justify-content-center py-2" style="width:100%">
+                            <div class="form-group col-lg-7 col-md-7 col-sm-12">
+                                <label for="select-date ml-3">Select Date Of Appointment</label>
+                                <input type="date" name="select-date" id="select-date" class="form-control ml-3">
+                            </div>
+                            <button class="btn btn-primary" id="btn-view" type="button">View Available Slots</button>
+                        </form>
+                    </div>
+                    <div class="row d-flex justify-content-center">
+                        <p class="small text-danger" id="error-text-app">
+    
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row d-flex justify-content-center mt-3 p-2" id="appointments">
+        
+        </div>
+    </div>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/scriptG.js"></script>
+</body>
+</html>

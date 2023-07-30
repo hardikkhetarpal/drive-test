@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G2 Driver Testing Kiosk</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container-fluid p-0 ml-0">
+        <%- include ('partials/drivernavbar'); %> 
+        <div class="row d-flex justify-content-center mt-3">
+            <div class="col-auto h3">G2 Test Appointment Slot Booking Form</div>
+        </div>
+        <div class="row d-flex justify-content-center mt-3">
+            <div class="col-auto text-muted lead"><span class="text-danger">*</span> &nbsp; fields are mandatory</div>
+        </div>
+        <%- include ('partials/form'); %> 
+        <div class="row d-flex justify-content-center">
+            <div class="col-sm-12 col-md-12 col-lg-8 mt-5">
+                <div class="row d-flex justify-content-center bg-light border border-dark border-rounded">
+                    <div class="row" style="width:100%">
+                        <form action="" class="form-inline row d-flex justify-content-center py-2" style="width:100%">
+                            <div class="form-group col-lg-7 col-md-7 col-sm-12">
+                                <label for="select-date ml-3">Select Date Of Appointment</label>
+                                <input type="date" name="select-date" id="select-date" class="form-control ml-3">
+                            </div>
+                            <button class="btn btn-primary" id="btn-view" type="button">View Available Slots</button>
+                        </form>
+                    </div>
+                    <div class="row d-flex justify-content-center">
+                        <p class="small text-danger" id="error-text-app">
+    
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row d-flex justify-content-center mt-3 p-2" id="appointments">
+        
+        </div>
+    </div>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/scriptG2.js"></script>
+
+</body>
+</html>

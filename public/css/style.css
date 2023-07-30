@@ -1,0 +1,26 @@
+html{
+    width: 100%;
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    overflow-x: hidden;
+}
+.container-fluid{
+    min-width: 100% !important;
+}
+p{
+    margin-bottom: 0.25rem;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
+}
+/* Suparno Karmakar 8777302  */

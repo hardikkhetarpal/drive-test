@@ -1,0 +1,98 @@
+<div class="row d-flex justify-content-center align-items-center mt-5 p-0">
+    <div class="col-lg-11 col-md-12 col-sm-12 bg-light border border-dark rounded p-2">
+        <div class="row d-flex justify-content-center">
+            <div class="col-auto">
+                <form class="form">
+                    <div class="row">
+                        <fieldset class="form-group">
+                            <legend>Personal Details</legend>
+                            <div class="row">
+                                <div class="form-group col-lg-auto col-md-6 col-sm-12">
+                                    <label for="fname">First Name<span class="text-danger">*</span></label>
+                                    <input type="text" name="fname" id="fname" class="form-control" placeholder="John">
+                                </div>
+                                <div class="form-group col-lg-auto col-md-6 col-sm-12">
+                                    <label for="lname">Last Name<span class="text-danger">*</span></label>
+                                    <input type="text" name="lname" id="lname" class="form-control" placeholder="Doe">
+                                </div>
+                                <div class="form-group col-lg-auto col-md-6 col-sm-12">
+                                    <label for="sin">UID<span class="text-danger">*</span></label>
+                                    <input type="text" name="sin" id="sin" class="form-control" placeholder="123-456-789">
+                                </div>
+                                <div class="form-group col-lg-auto col-md-6 col-sm-12">
+                                    <label for="dob">D.O.B<span class="text-danger">*</span></label>
+                                    <input type="date" name="dob" id="dob" class="form-control" placeholder="Enter Date of Birth">
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="row">
+                        <fieldset class="form-group">
+                            <legend>Address </legend>
+                            <div class="row">
+                                <div class="form-group col-lg-auto col-md-6 col-sm-12">
+                                    <label for="street">Street Name<span class="text-danger">*</span></label>
+                                    <input type="text" name="street" id="street" class="form-control" placeholder="10 King St.">
+                                </div>
+                                <div class="form-group col-lg-auto col-md-6 col-sm-12">
+                                    <label for="city">City<span class="text-danger">*</span></label>
+                                    <input type="text" name="city" id="city" class="form-control" placeholder="Waterloo">
+                                </div>
+                                <div class="form-group col-lg-auto col-md-6 col-sm-12">
+                                    <label for="prov">Province<span class="text-danger">*</span></label>
+                                    <input type="text" name="prov" id="prov" class="form-control" placeholder="Ontario">
+                                </div>
+                                <div class="form-group col-lg-auto col-md-6 col-sm-12">
+                                    <label for="post">Postal Code<span class="text-danger">*</span></label>
+                                    <input type="text" name="post" id="post" class="form-control" placeholder="N2C 4H5">
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="row">
+                        <fieldset class="form-group">
+                            <legend>Car Details</legend>
+                            <div class="row">
+                                <div class="form-group col-lg-auto col-md-6 col-sm-12">
+                                    <label for="make">Make<span class="text-danger">*</span></label>
+                                    <input type="text" name="make" id="make" class="form-control" placeholder="Honda Civic">
+                                </div>
+                                <div class="form-group col-lg-auto col-md-6 col-sm-12">
+                                    <label for="model">Model<span class="text-danger">*</span></label>
+                                    <input type="text" name="model" id="model" class="form-control" placeholder="2101 Sports Edition">
+                                </div>
+                                <div class="form-group col-lg-auto col-md-6 col-sm-12">
+                                    <label for="year">Year<span class="text-danger">*</span></label>
+                                    <input type="number" name="year" id="year" class="form-control" placeholder="2019">
+                                </div>
+                                <div class="form-group col-lg-auto col-md-6 col-sm-12">
+                                    <label for="plate">Plate Number<span class="text-danger">*</span></label>
+                                    <input type="text" name="plate" id="plate" class="form-control" placeholder="E0PK DWER">
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <% if(type === "G2") { %>
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-lg-auto col-md-12 col-sm-12">
+                            <button class="btn btn-primary" type="button" id="submitg2">Submit Details</button>
+                        </div>
+                    </div>
+                    <% } %>  
+                    <% if(type === "G") { %>
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-lg-auto col-md-12 col-sm-12">
+                            <button class="btn btn-primary" type="button" id="updateg">Update Details</button>
+                        </div>
+                    </div>
+                    <% } %>  
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-lg-auto col-md-12 col-sm-12">
+                            <span class="text-danger small" id="error-text"></span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

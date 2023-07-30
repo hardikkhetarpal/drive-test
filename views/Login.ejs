@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Login/Signup</title>
+</head>
+<body class="container-fluid p-0">
+    <%- include ('partials/navbar'); %> 
+    <% if(type === "login") { %> 
+    <div class="row d-flex justify-content-center align-items-center login-row mt-5">
+        <div class="col-lg-4 col-md-6 col-sm-12 bg-light">
+            <form action="" class="form">
+                <p class="display-4 mb-2 text-center">Login</p>
+                <input type="text" name="uname" id="log-uname" class="form-control my-2" placeholder="Enter Username">
+                <select name="log-utype" id="log-utype" class="form-control my-2">
+                    <option value="driver">Driver</option>
+                    <option value="examiner">Examiner</option>
+                    <option value="cordinator">Co-ordinator</option>
+                    <option value="admin">Admin</option>
+                </select>
+                <input type="password" name="password" id="log-password" class="form-control my-2" placeholder="Enter Password">
+                <div class="row d-flex justify-content-center">
+                    <button class="btn btn-primary text-center" id="login" type="button" >Login</button>
+                </div>
+                <div class="row d-flex justify-content-center">
+                    <a href="" class="small">Forgot Password</a>
+                </div>
+                <div class="row d-flex justify-content-center">
+                    <p class="small text-muted">Don't have an account? <a href="/register">Sign up</a></p>
+                </div>
+                <div class="row d-flex justify-content-center">
+                    <div class="col-lg-auto col-md-12 col-sm-12">
+                        <span class="text-danger small" id="error-text"></span>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <% } %> 
+    <% if(type === "register") { %> 
+    <div class="row d-flex justify-content-center align-items-center login-row mt-5">
+        <div class="col-lg-4 col-md-6 col-sm-12 bg-light">
+            <form action="" class="form">
+                <p class="display-4 mb-2 text-center">Register</p>
+                <input type="text" name="uname" id="reg-uname" class="form-control my-2" placeholder="Enter Username" required>
+                <select name="reg-utype" id="reg-utype" class="form-control my-2">
+                    <option value="driver">Driver</option>
+                    <option value="examiner">Examiner</option>
+                    <option value="cordinator">Co-ordinator</option>
+                    <option value="admin">Admin</option>
+                </select>
+                <input type="password" name="password" id="reg-password" class="form-control my-2" placeholder="Enter Password" required>
+                <input type="password" name="password" id="reg-verify-password" class="form-control my-2" placeholder="Re-Enter Password" required>
+                <div class="row d-flex justify-content-center">
+                    <button class="btn btn-primary text-center" id="register" type="button">Register</button>
+                </div>
+                <div class="row d-flex justify-content-center">
+                    <p class="small text-muted">Already have an account <a href="/login">Sign in</a></p>
+                </div>
+                <div class="row d-flex justify-content-center">
+                    <div class="col-lg-auto col-md-12 col-sm-12">
+                        <span class="text-danger small" id="error-text"></span>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <% } %>
+    <script>
+    </script>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/login.js"></script>
+</body>
+</html>

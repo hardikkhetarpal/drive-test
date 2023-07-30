@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driver Testing Kiosk</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container-fluid p-0">
+        <% if (type == "admin") { %>
+            <%- include ('partials/adminnavbar'); %> 
+        <% } %>
+        <% if (type == "examiner") { %>
+            <%- include ('partials/examinernavbar'); %> 
+        <% } %>
+        <% if (type == "driver") { %>
+            <%- include ('partials/drivernavbar'); %> 
+        <% } %>
+        <% if (type == "new") { %>
+            <%- include ('partials/navbar'); %> 
+        <% } %>
+        <div class="row my-3">
+            <div>
+                <marquee behavior="" direction="">Welcome to DriveTest</marquee>
+                <img src="driving-test.jpg" alt="drive test" width="1300" height="450">
+              </div>
+              <marquee behavior="" direction="">Welcome to DriveTest</marquee>
+    </div>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            let func = "<%= func %>"
+            if(func == "logout"){
+                console.log('works')
+                sessionStorage.clear()
+                alert("You have been successfully logged out")
+            }
+        })
+    </script>
+</body>
+</html>
